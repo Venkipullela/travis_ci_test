@@ -2,7 +2,11 @@ language: rust
 services:
   - postgresql
 before_script:
-  - psql -c 'create database random_test;' -U postgres
-  - psql -d random_test -f random.sql
+  - psql -c "DROP DATABASE IF EXISTS acko_test;" template1
+  - psql -c "CREATE DATABASE acko_test" template1
+  - psql -c "CREATE EXTENSION IF NOT EXISTS hstore;" acko_test
+  - psql -c "CREATE EXTENSION IF NOT EXISTS citext;" acko_test
+  - psql -c "CREATE EXTENSION IF NOT EXISTS postgis;" acko_test
+  - psql -d acko_test -f acko.sql
 script:
   - cargo run
