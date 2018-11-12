@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d7b28dbf-d277-4c9b-ae81-8ef862cd32b6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,17 +52,17 @@
           <entry key="py" value="3" />
           <entry key="rs" value="1349" />
           <entry key="toml" value="2" />
-          <entry key="txt" value="34" />
-          <entry key="yml" value="26" />
+          <entry key="txt" value="37" />
+          <entry key="yml" value="39" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="34" />
+          <entry key="PLAIN_TEXT" value="37" />
           <entry key="Python" value="3" />
           <entry key="Rust" value="1349" />
           <entry key="TOML file" value="2" />
-          <entry key="YAML" value="26" />
+          <entry key="YAML" value="39" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -185,7 +184,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542037707056" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542037822394" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
     <property name="org.rust.hideToolchainNotifications" value="true" />
@@ -296,7 +295,21 @@
       <option name="project" value="LOCAL" />
       <updated>1542037310619</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="13th">
+      <created>1542037583774</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1542037583775</updated>
+    </task>
+    <task id="LOCAL-00011" summary="14th">
+      <created>1542037808136</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1542037808136</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -344,7 +357,9 @@
     <MESSAGE value="10th" />
     <MESSAGE value="11th" />
     <MESSAGE value="12th" />
-    <option name="LAST_COMMIT_MESSAGE" value="12th" />
+    <MESSAGE value="13th" />
+    <MESSAGE value="14th" />
+    <option name="LAST_COMMIT_MESSAGE" value="14th" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/dictionaries/venkatesh.xml">
