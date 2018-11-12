@@ -1,6 +1,11 @@
 language: rust
 services:
   - postgresql
+addons:
+  postgresql: 9.6
+  apt:
+    packages:
+    - postgresql-9.6-postgis-2.3
 before_script:
   - psql -c "DROP DATABASE IF EXISTS acko_test;" template1
   - psql -c "CREATE DATABASE acko_test" template1
