@@ -5,7 +5,7 @@ addons:
   postgresql: 10
   apt:
     packages:
-    - postgresql-10-postgis-2.3
+    - postgresql-10-postgis-2.4
 before_script:
   - psql -c "DROP DATABASE IF EXISTS acko_test;" template1
   - psql -c "CREATE DATABASE acko_test" template1
