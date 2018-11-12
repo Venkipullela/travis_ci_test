@@ -1,3 +1,8 @@
 language: rust
+services:
+  - postgresql
+before_script:
+  - psql -c 'create database random_test;' -U postgres
+  - psql -d random_test -f random.sql
 script:
-  - cargo run --verbose --all
+  - cargo run
