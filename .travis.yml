@@ -5,13 +5,18 @@ addons:
   postgresql: 10
   apt:
     packages:
+    - postgresql-10
+    - postgresql-client-10
     - postgresql-10-postgis-2.4
+env:
+  global:
+  - PGPORT=5433
 before_script:
-  - psql -h 127.0.0.1 -c "DROP DATABASE IF EXISTS acko_test;" template1
-  - psql -h 127.0.0.1 -c "CREATE DATABASE acko_test" template1
-  - psql -h 127.0.0.1 -c "CREATE EXTENSION IF NOT EXISTS hstore;" acko_test
-  - psql -h 127.0.0.1 -c "CREATE EXTENSION IF NOT EXISTS citext;" acko_test
-  - psql -h 127.0.0.1 -c "CREATE EXTENSION IF NOT EXISTS postgis;" acko_test
+  - psql -U postgres -c "DROP DATABASE IF EXISTS acko_test;" template1
+  - psql -U postgres -c "CREATE DATABASE acko_test" template1
+  - psql -U postgres -c "CREATE EXTENSION IF NOT EXISTS hstore;" acko_test
+  - psql -U postgres -c "CREATE EXTENSION IF NOT EXISTS citext;" acko_test
+  - psql -U postgres -c "CREATE EXTENSION IF NOT EXISTS postgis;" acko_test
   - psql -d acko_test -f acko.sql
 script:
   - cargo run
