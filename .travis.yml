@@ -1,4 +1,3 @@
-sudo: required
 dist: trusty
 language: rust
 services:
@@ -30,4 +29,5 @@ before_script:
   - psql -U postgres -c "CREATE EXTENSION IF NOT EXISTS postgis;" acko_test
   - psql -d acko_test -f acko.sql
 script:
+  -
   - cargo run
