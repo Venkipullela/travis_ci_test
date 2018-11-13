@@ -28,7 +28,11 @@ before_script:
   - psql -U postgres -c "CREATE EXTENSION IF NOT EXISTS hstore;" acko_test
   - psql -U postgres -c "CREATE EXTENSION IF NOT EXISTS citext;" acko_test
   - psql -U postgres -c "CREATE EXTENSION IF NOT EXISTS postgis;" acko_test
+  - date +%Y-%m-%d:%H-%M-%S
   - psql -d acko_test -f acko.sql
   - mv travis.json settings.json
+  - date +%Y-%m-%d:%H-%M-%S
 script:
   - RUST_BACKTRACE=full DBNAME=acko_test cargo test --all --no-fail-fast -- --test --test-threads=3
+after_script:
+  - date +%Y-%m-%d:%H-%M-%S
