@@ -31,5 +31,3 @@ before_script:
   - mv travis.json settings.json
 script:
   - cargo run
-after_script:
-  - mv settings.json travis.json
