@@ -11,7 +11,7 @@ addons:
     - postgresql-client-10
     - postgresql-10-postgis-2.4
     - postgis
-    - postgresql-10-postgis-scripts
+    - postgresql-10-postgis-2.4-scripts
 before_install:
   - sudo sed -i -e '/local.*peer/s/postgres/all/' -e 's/peer\|md5/trust/g' /etc/postgresql/*/main/pg_hba.conf
   - sudo service postgresql restart
