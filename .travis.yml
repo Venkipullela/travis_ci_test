@@ -10,6 +10,8 @@ addons:
     - postgresql-10
     - postgresql-client-10
     - postgresql-10-postgis-2.4
+    - postgresql-10-postgis-scripts
+    - postgis
 before_install:
   - sudo sed -i -e '/local.*peer/s/postgres/all/' -e 's/peer\|md5/trust/g' /etc/postgresql/*/main/pg_hba.conf
   - sudo service postgresql restart
@@ -21,7 +23,6 @@ env:
   - PGPASSWORD=''
   - PGHOST=localhost
 before_script:
-  - psql -U postgres -c "create extension postgis"
   - psql -U postgres -c "DROP DATABASE IF EXISTS acko_test;" template1
   - psql -U postgres -c "CREATE DATABASE acko_test" template1
   - psql -U postgres -c "CREATE EXTENSION IF NOT EXISTS hstore;" acko_test
