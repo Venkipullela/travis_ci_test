@@ -1,5 +1,6 @@
 dist: trusty
 language: rust
+cache: cargo
 services:
   - postgresql
 addons:
@@ -30,4 +31,4 @@ before_script:
   - psql -d acko_test -f acko.sql
   - mv travis.json settings.json
 script:
-  - cargo run
+  - RUST_BACKTRACE=full DBNAME=acko_test cargo test --all --no-fail-fast -- --test --test-threads=3
