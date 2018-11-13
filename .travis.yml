@@ -28,6 +28,8 @@ before_script:
   - psql -U postgres -c "CREATE EXTENSION IF NOT EXISTS citext;" acko_test
   - psql -U postgres -c "CREATE EXTENSION IF NOT EXISTS postgis;" acko_test
   - psql -d acko_test -f acko.sql
+  - mv travis.json settings.json
 script:
-  -
   - cargo run
+after_script:
+  - mv settings.json travis.json
