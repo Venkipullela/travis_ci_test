@@ -5,7 +5,7 @@ use regex::Regex;
 
 fn main() -> std::io::Result<()> {
 
-    println!("happy bday");
+    println!("hey brooo");
 
     let mut a = 5;
     while a != 0 {
