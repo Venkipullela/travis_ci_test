@@ -3,7 +3,7 @@ use std::fs::File;
 
 fn main() -> std::io::Result<()> {
 
-    println!("happy bday");
+    println!("ento ee build");
 
     let mut buffer = File::create("foo.txt")?;
 
