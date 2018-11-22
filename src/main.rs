@@ -3,7 +3,7 @@ use std::fs::File;
 
 fn main() -> std::io::Result<()> {
 
-    println!("ento ee build");
+    println!("trying status checks for commits");
 
     let mut buffer = File::create("foo.txt")?;
 
