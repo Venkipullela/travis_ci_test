@@ -5,7 +5,7 @@ use regex::Regex;
 
 fn main() -> std::io::Result<()> {
 
-    println!("it will trigger from github side");
+    println!("it will trigger from github side and should show the status as well");
 
     let mut a = 5;
     while a != 0 {
