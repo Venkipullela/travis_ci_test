@@ -13,8 +13,6 @@ fn main() -> std::io::Result<()> {
         println!("{}",a);
     };
 
-    let a = None;
-    let b = a.unwrap();
 
 //    let a = String::from("venki12321");
 //    println!("{}",a.replace("ven", "hey"));
