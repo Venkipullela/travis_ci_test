@@ -18,10 +18,10 @@ pipeline {
     }
     post {
         success {
-            setBuildStatus("Build succeeded", "SUCCESS");
+            setGitHubPullRequestStatus("Build succeeded", "SUCCESS");
         }
         failure {
-            setBuildStatus("Build failed", "FAILURE");
+            setGitHubPullRequestStatus("Build failed", "FAILURE");
         }
       }
 }
