@@ -1,3 +1,13 @@
+void setBuildStatus(String message, String state) {
+  step([
+      $class: "GitHubCommitStatusSetter",
+      reposSource: [$class: "ManuallyEnteredRepositorySource", url: "https://github.com/my-org/my-repo"],
+      contextSource: [$class: "ManuallyEnteredCommitContextSource", context: "ci/jenkins/build-status"],
+      errorHandlers: [[$class: "ChangingBuildStatusErrorHandler", result: "UNSTABLE"]],
+      statusResultSource: [ $class: "ConditionalStatusResultSource", results: [[$class: "AnyBuildResult", message: message, state: state]] ]
+  ]);
+}
+
 pipeline {
     agent any
 
@@ -18,10 +28,10 @@ pipeline {
     }
     post {
         success {
-            setGitHubPullRequestStatus("gitcommit","Build succeeded", "SUCCESS");
+            setBuildStatus("Build succeeded", "SUCCESS");
         }
         failure {
-            setGitHubPullRequestStatus("gitcommit","Build failed", "FAILURE");
+            setBuildStatus("Build failed", "FAILURE");
         }
       }
 }
