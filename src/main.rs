@@ -11,6 +11,8 @@ fn main() -> std::io::Result<()> {
     while a != 0 {
         a = a-1;
         println!("{}",a);
+
+
     };
 
 
